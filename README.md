@@ -1,55 +1,10 @@
-# xeus-python + JupyterLite demo
+# AAPT SM 2024 Computation in the Lab Workshop
 
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlite.github.io/xeus-python-demo/notebooks/?path=demo.ipynb)
+Welcome to the Computation in the Lab Workshop! 
 
-xeus-python + JupyterLite deployed as a static site to GitHub Pages, for demo purposes.
+We'll be using [python](https://python.org) and [JupyterLab](https://try.jupyter.org) as a platform to apply computational concepts in a laboratory context.
 
-## ✨ Try it in your browser ✨
+We'll be using a small [ESP-32 microcontroller](https://www.espressif.com/en/products/socs/esp32-s2) and the [Thonny IDE](https://thonny.org/) to collect real data as one might in a typical physics lab dealing with circuits.
 
-https://jupyterlite.github.io/xeus-python-demo/notebooks/?path=demo.ipynb
+Let's start with python. We'll begin our work [here](https://sspickle.github.io/SM2024-CompLab/lab/index.html)
 
-## ≠ How does it compare to the Pyodide kernel?
-
-#### Pyodide kernel:
-
-- Is based on [Pyodide](https://github.com/pyodide/pyodide)
-- Uses [IPython](https://github.com/ipython/ipython) for the code execution (access to IPython magics, support for the inline Matplotlib backend, *etc*)
-- Provides a way to dynamically install packages with ``piplite`` (**e.g.** ``await piplite.install("ipywidgets")``)
-- **Does not support** sleeping with ``from time import sleep``
-- **Does not support** pre-installing packages
-
-#### jupyterlite-xeus-python:
-
-- Is based on [xeus-python](https://github.com/jupyter-xeus/xeus-python)
-- Uses [IPython](https://github.com/ipython/ipython) for the code execution (access to IPython magics, support for the inline Matplotlib backend, *etc*)
-- **Does not provide** a way to dynamically install packages (yet. We are working on building a ``mamba`` package manager for WASM)
-- **Supports** sleeping with ``from time import sleep``
-- **Supports** pre-installing packages from ``emscripten-forge`` and ``conda-forge``, by providing an ``environment.yml`` file defining the runtime environment
-
-## 💡 How to make your own deployment
-
-![Deploy your own](deploy.gif)
-
-Then your site will be published under https://{USERNAME}.github.io/{DEMO_REPO_NAME}
-
-## 📦 How to install extra packages
-
-You can pre-install extra packages for xeus-python by adding them to the ``environment.yml`` file.
-
-For example, if you want to create a JupyterLite deployment with NumPy and Matplotlib pre-installed, you would need to edit the ``environment.yml`` file as following:
-
-```yml
-name: xeus-python-kernel
-channels:
-  - https://repo.mamba.pm/emscripten-forge
-  - conda-forge
-dependencies:
-  - xeus-python
-  - numpy
-  - matplotlib
-```
-
-Only ``no-arch`` packages from ``conda-forge`` and packages from ``emscripten-forge`` can be installed.
-- **How do I know if a package is ``no-arch`` on ``conda-forge``?** ``no-arch`` means that the package is OS-independent, usually pure-python packages are ``no-arch``. To check if your package is ``no-arch`` on ``conda-forge``, check if the "Platform" entry is "no-arch" in the https://beta.mamba.pm/channels/conda-forge?tab=packages page. If your package is not ``no-arch`` but is a pure Python package, then you should probably update the feedstock to turn your package into a ``no-arch`` one.
-![](noarch.png)
-- **How do I know if my package is on ``emscripten-forge``?** You can see the list of packages pubished on ``emscripten-forge`` [here](https://beta.mamba.pm/channels/emscripten-forge?tab=packages). In case your package is missing, or it's not up-to-date, feel free to open an issue or a PR on https://github.com/emscripten-forge/recipes.
