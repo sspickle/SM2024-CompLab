@@ -8,3 +8,11 @@ We'll be using a small [ESP-32 microcontroller](https://www.espressif.com/en/pro
 
 Let's start with python. We'll begin our work [here](https://sspickle.github.io/SM2024-CompLab/lab/index.html)
 
+Once you're here you can get started by opening the "README.ipynb" notebook like so:
+
+|Figure 1|
+|:-|
+|![Fig. 1: README notebook](./content/imgs/jupyter-launcher.png)|
+|Jupyter Launcher View|
+
+
