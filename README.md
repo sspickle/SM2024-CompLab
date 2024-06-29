@@ -8,13 +8,13 @@ We'll be using a small [ESP-32 microcontroller](https://www.espressif.com/en/pro
 
 Python will be the common programming language we'll use in both environments.
 
-Let's start with learning python. We'll begin our work a browser based version of[Jupyter Lab](https://sspickle.github.io/SM2024-CompLab/lab/index.html).
+Let's start with learning python. We'll begin our work a browser based version of [Jupyter Lab](https://sspickle.github.io/SM2024-CompLab/lab/index.html).
 
-Once you're here you can get started by opening the "README.ipynb" notebook like so:
+Click on the [Jupyter Lab](https://sspickle.github.io/SM2024-CompLab/lab/index.html) link. Once the window finishes rendering you can get started by opening the "README.ipynb" notebook like so:
 
 |Figure 1|
 |:-|
 |![Fig. 1: README notebook](./content/imgs/jupyter-launcher.png)|
 |Jupyter Launcher View|
 
-
+Enjoy!
