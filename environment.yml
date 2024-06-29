@@ -4,7 +4,7 @@ channels:
   - conda-forge
 dependencies:
   - xeus-python
-  - numpy 
+  - numpy<2.0 
   - matplotlib
   - sympy
   - scipy
